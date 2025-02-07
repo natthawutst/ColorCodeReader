@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>Total Resistors Detected: {{ resistor_count }}</p>
+    <img src="{{ url_for('static', filename=result_image) }}" alt="Result">
+    <h2>Resistor Colors</h2>
+    <ul>
+        {% for obj in object_colors %}
+        <li>
+            <img src="{{ url_for('static', filename=obj.path) }}" alt="Object">
+            <ul>
+                {% for color in obj.colors %}
+                <li>Color: {{ color.color }} - Pixels: {{ color.pixel_count }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

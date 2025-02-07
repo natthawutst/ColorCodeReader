@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 90px; /* เว้นที่ให้ header */
+}
+
+.container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+
+/* Header Styles */
+.header {
+    background: linear-gradient( 90deg,  rgba(8,81,98,1) 14.5%, rgb(182, 219, 237) 135.4% );
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* ทำให้ header ติดอยู่กับหน้าจอ */
+    top: 0; /* ยึดที่ด้านบน */
+    left: 0;
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมดของหน้าจอ */
+    z-index: 1000; /* ตั้งลำดับความสำคัญให้ header อยู่ด้านหน้า */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Topic Styles */
+.topic {
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 60%; /* ลดความกว้างของ topic */
+    max-width: 600px; /* จำกัดความกว้างไม่ให้เกิน */
+    line-height: 1.4; /* เพิ่มความอ่านง่าย */
+}
+/* Resistor Calculator Section */
+
+/* General Container */
+.container1 {
+    width: 100%;
+    max-width: 400px; /* ลดความกว้างสูงสุด */
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 2px solid #d9d9d9; /* สีกรอบ */
+    border-radius: 12px; /* ความโค้ง */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+/* Resistor Calculator Section */
+.resistor-calc-parameter {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9fb;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    width: 90%;
+}
+
+.resistor-calc-labels {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #526c75;
+    text-align: left; /* จัดตำแหน่งข้อความ */
+}
+
+.resistor-calc-input {
+    width: 550px; /* ใช้พื้นที่ให้เต็ม */
+    max-width: 400px; /* จำกัดความกว้างสูงสุด */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.resistor-calc-input:focus {
+    border-color: #5c80bc;
+    box-shadow: 0 0 6px rgba(92, 128, 188, 0.5);
+}
+
+/* Results Section */
+.calculator-results {
+    color: #333;
+    max-width: 300px; /* เพิ่มความกว้างให้สมดุล */
+    margin: 20px auto;
+    padding: 25px;
+    background: linear-gradient(145deg, #ffffff, #e4e6eb);
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#resistor-results {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3a506b;
+    line-height: 1.6; /* เพิ่มช่องว่างระหว่างบรรทัด */
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #5c80bc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #3a506b;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,201 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%; /* ปรับให้รูปเต็มความกว้างที่กำหนด */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient( 90deg,  rgba(8,81,98,1) 14.5%, rgb(182, 219, 237) 135.4% );
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* ทำให้ header ติดอยู่กับหน้าจอ */
+    top: 0; /* ยึดที่ด้านบน */
+    left: 0;
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมดของหน้าจอ */
+    z-index: 1000; /* ตั้งลำดับความสำคัญให้ header อยู่ด้านหน้า */
+}
+
+.header-img {
+    width: 700px; /* ปรับให้รูปเต็มความกว้างที่กำหนด */
+    max-width: 700px;
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+    object-fit: cover; /* ครอบคลุมพื้นที่ */
+    justify-content: center;
+    text-align: center
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 40px 15px;
+    margin-top: 5px; /* ปรับระยะเพื่อหลีกเลี่ยง header ซ้อนทับ */
+}
+
+
+.theory, .intro, .example {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างบล็อก */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resistor-guide {
+    display: flex;
+    justify-content: space-between; /* จัดพื้นที่ระหว่างบล็อก */
+    gap: 20px; /* เพิ่มช่องว่างระหว่างซ้าย-ขวา */
+    margin: 20px 0;
+}
+
+.guide-4band, .guide-5band {
+    flex: 1; /* ให้พื้นที่เท่ากัน */
+    background: #DFE0DF;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guide-4band h4, .guide-5band h4 {
+    color: #526C75;
+    margin-bottom: 10px;
+}
+
+.guide-4band ul, .guide-5band ul {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+}
+
+.guide-4band ul li, .guide-5band ul li {
+    margin-bottom: 8px;
+}
+
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: disc inside;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.resistor-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* จัดตรงกลางแนวนอน */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+
+.example-img {
+    max-width: 190px;
+    height: auto;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background: #526C75;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media all and (min-width: 320px) and (max-width: 780px) {
+
+    h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    
+    h4 {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    ul {
+        list-style: disc inside;
+        margin: 10px 0;
+        padding: 0;
+        font-size: 15px;
+    }
+}
